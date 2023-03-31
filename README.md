@@ -1,33 +1,13 @@
-## Routing /pages
-
-Next.js is a React framework that has a very flexible routing capability. When creating a Next.js application, we can determine the routing using several different approaches, one of which is by creating multiple files inside the `/pages` directory.
+## Routing /app
 
 
-In this approach, every file placed inside the pages directory is automatically turned into a route.
-<br/>In this example, if you create a file `pages/dashboard/index.tsx`
+1. Add:<br/> experimental:{
+ appDir: true
+} <br/>
+inside  next.config.js file
+
+2. Create app folder to store all the files, it works the same way as pages folder previosly. Also page.tsx file works the same way as index.tsx file 
 
 
-├── index.tsx
-
-└── settings.tsx
-
-We can access the index.tsx with `/dashboard` route and settings.tsx with `/dashboard.settings.tsx` route in your Next.js application. This is suitable for creating simple Next.js applications that do not require a complex routing structure.
-<br/><br/><br/>
-
-
-
-
-another example:
-<br/>
-pages/
-
-├── index.tsx
-
-├── about.tsx
-
-├── contact.tsx
-
-└── ...
-
-In this example, the index.tsx, about.tsx, and contact.tsx files are automatically turned into routes that can be accessed at `/`, `/about`, and `/contact`, respectively.
+In this example, the page.tsx inside the dashboard folder, and page.tsx inside the app folder are turned into routes that can be accessed at `/dashboard`, `/` respectively.
 
